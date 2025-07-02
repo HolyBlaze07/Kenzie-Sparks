@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gratitude Cards | Sparks of Wonder</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <img
+        src="../assets/temporary-logo.png"
+        alt="Sparks of Wonder Logo"
+        class="logo"
+      />
+      <nav class="navbar">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../portfolio.html">Portfolio</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../shop.html" class="active">Shop</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Back to Shop -->
+    <div class="back-link">
+      <a href="../shop.html">← Back to Shop</a>
+    </div>
+
+    <main class="product-detail container">
+      <div class="product-detail-wrapper">
+        <div class="product-image">
+          <img
+            src="../assets/images/gratitude-cards.jpg"
+            alt="Printable Gratitude Cards"
+          />
+        </div>
+
+        <div class="product-info">
+          <h1>Gratitude Cards</h1>
+          <p class="price">$4.00</p>
+          <p class="description">
+            A set of 10 printable gratitude cards designed to help you pause and
+            reflect on God's daily mercies. Perfect for quiet time journaling,
+            gifts, or Scripture memory.
+          </p>
+          <ul class="product-details">
+            <li>🖨️ High-resolution printable cards (PDF & PNG)</li>
+            <li>📖 5 Scripture-based prompts + 5 blank cards</li>
+            <li>💌 Great for journaling, devotionals, or snail mail</li>
+          </ul>
+          <button
+            onclick="addToCart('Gratitude Cards', 4.00, '../assets/images/gratitude-cards.jpg')"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Simulated Cart Button -->
+    <section class="cart-preview">
+      <a href="../checkout.html" class="btn">🛒 View Cart & Checkout</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../portfolio.html">Portfolio</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../shop.html">Shop</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2025 Sparks of Wonder. Presentation Only..</p>
+    </footer>
+
+    <script>
+      document
+        .querySelector(".add-to-cart-btn")
+        .addEventListener("click", () => {
+          alert("✅ “Gratitude Cards” added to your cart!");
+        });
+    </script>
+  </body>
+</html>
