@@ -20,12 +20,17 @@
           <img src="assets/temporary-logo.png" class="logo" alt="Sparks of Wonder logo" />
         </a>
       </div>
+      <!-- Add this inside your .navbar div -->
+<button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+  ☰
+</button>
+
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
 
-        <li><a href="">About</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="">Portfolio</a></li>
-        <li><a href="">Blog</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="">Shop</a></li>
         <li><a href="">Contact</a></li>
 
@@ -54,6 +59,7 @@
   <!-- Featured Products -->
   <section class="featured-products">
     <h2>Featured Products</h2>
+    <img src="assets/kenzie-name.png" class="kenzie-name" alt="Kenzie Sparks name" /> 
     <img src="assets/olives.png" class="olives" alt="Olives">
     <img src="assets/duck.png" class="duck" alt="Duck">
 
@@ -100,7 +106,7 @@
   <section class="about-the-artist">
     <h2>About the Artist</h2>
 
-    <img src="assets/Designer.jpeg" alt="Kenzie Sparks portrait" class="artist-photo" />
+    <img src="assets/Designer6.jpeg" alt="Kenzie Sparks portrait" class="artist-photo" />
     <p>
       I'm Kenzie Sparks — an artist who believes in designing from a place of
       grace. My doodles and printable kits are inspired by Scripture, slow
@@ -123,21 +129,28 @@
     </form>
   </section>
 
+  <section class="disclaimer">
+  <p>
+    💡 <strong>Sparks of Wonder is a fictional portfolio mock-up</strong> designed to show the kind of web design, branding, and layout I can build for creative entrepreneurs.
+    All artwork and products are conceptual and used for demonstration purposes only.
+  </p>
+</section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="">Portfolio</a></li>
         <li><a href="blog.html">Blog</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="">Shop</a></li>
+        <li><a href="">Contact</a></li>
       </ul>
     </div>
 
     <div class="left-section">
-      <img src="assets/images/footer-assets/temporary-logo.png" alt="Sparks of Wonder Logo" class="footer-logo" />
+      <img src="assets/temporary-logo.png" alt="Sparks of Wonder Logo" class="footer-logo" />
       <ul class="social-media-links">
         <li><a href="#">Instagram</a></li>
         <li><a href="#">Pinterest</a></li>
@@ -154,6 +167,18 @@
   </footer>
   <script src="js/index.js"></script>
   <script src="js/floatingElements.js"></script>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navbar = document.querySelector('.navbar');
+
+  hamburger.addEventListener('click', () => {
+    navbar.classList.toggle('open');
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
+  });
+</script>
+
 
 </body>
 

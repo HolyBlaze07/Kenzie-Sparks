@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>5 Ways to Delight in the Small Things | Sparks of Wonder</title>
-    <link rel="stylesheet" href="../assets/styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
     <!-- Header -->
@@ -13,21 +13,24 @@
         <div class="logo-container">
           <a href="index.html">
             <img
-              src="assets/temporary-logo.png"
+              src="../assets/temporary-logo.png"
               class="logo"
               alt="Sparks of Wonder logo"
             />
           </a>
         </div>
+        <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+  ☰
+</button>
         <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="../index.html" class="active">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="">Portfolio</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="">Shop</a></li>
+          <li><a href="">Contact</a></li>
         </ul>
-        <a href="freebies.html" class="freebies-btn">Get Your Freebie</a>
+        <a href="../freebies.html" class="freebies-btn">Get Your Freebie</a>
       </nav>
     </header>
 
@@ -37,7 +40,7 @@
         <h1>5 Ways to Delight in the Small Things</h1>
         <p class="post-date">Posted on July 5, 2025</p>
         <img
-          src="../assets/images/blog3.jpg"
+          src="../assets/Designer10.jpeg"
           alt="Floral doodles on a notebook"
           class="blog-feature-image"
         />
@@ -103,38 +106,48 @@
       </div>
     </main>
 
-    <!-- Footer -->
-    <footer>
-      <nav class="footer-nav">
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../about.html">About</a></li>
-          <li><a href="../portfolio.html">Portfolio</a></li>
-          <li><a href="../blog.html">Blog</a></li>
-          <li><a href="../shop.html">Shop</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-        </ul>
-      </nav>
+   <!-- Footer -->
+  <footer class="footer">
+     <div class="footer-nav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="">Portfolio</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="">Shop</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </div>
 
-      <div class="left-section">
-        <img
-          src="../assets/images/footer-assets/temporary-logo.png"
-          alt="Sparks of Wonder Logo"
-          class="footer-logo"
-        />
-        <ul class="social-media-links">
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Pinterest</a></li>
-        </ul>
-      </div>
 
-      <div class="right-section">
-        <ul class="footer-links">
-          <li><a href="#privacy-policy">Privacy Policy</a></li>
-          <li><a href="#terms-of-service">Terms of Service</a></li>
-        </ul>
-        <p>&copy; 2025 Sparks of Wonder. Presentation Only..</p>
-      </div>
-    </footer>
-  </body>
+    <div class="left-section">
+      <img src="../assets/temporary-logo.png" alt="Sparks of Wonder Logo" class="footer-logo" />
+      <ul class="social-media-links">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Pinterest</a></li>
+      </ul>
+    </div>
+
+    <div class="right-section">
+      <ul class="footer-links">
+        <li><a href="#privacy-policy">Privacy Policy</a></li>
+        <li><a href="#terms-of-service">Terms of Service</a></li>
+      </ul>
+      <p>&copy; 2025 Sparks of Wonder. Presentation Only..</p>
+    </div>
+  </footer>
+  <script src="js/index.js"></script>
+  <script src="js/floatingElements.js"></script>
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navbar = document.querySelector('.navbar');
+
+  hamburger.addEventListener('click', () => {
+    navbar.classList.toggle('open');
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
+  });
+</script>
+</body>
+
 </html>

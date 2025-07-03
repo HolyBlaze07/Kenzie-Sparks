@@ -18,6 +18,9 @@
             />
           </a>
         </div>
+        <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+  ☰
+</button>
         <ul class="nav-links">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -38,11 +41,9 @@
         your quiet time or journal.
       </p>
 
-      <form action="#" method="POST" class="freebie-form">
-        <label for="email">Your Email</label>
-        <input type="email" name="email" id="email" required />
-        <button type="submit">Get My Freebie</button>
-      </form>
+      <input type="email" name="email" id="email" class="input" required />
+<button type="submit" class="btn">Get My Freebie</button>
+
 
       <!-- Simulated download -->
       <div class="freebie-download">
@@ -67,5 +68,15 @@
         form.reset();
       });
     </script>
+    <script>
+  const hamburger = document.querySelector('.hamburger');
+  const navbar = document.querySelector('.navbar');
+
+  hamburger.addEventListener('click', () => {
+    navbar.classList.toggle('open');
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
+  });
+</script>
   </body>
 </html>

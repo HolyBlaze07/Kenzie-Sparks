@@ -74,7 +74,7 @@ button {
 .nav-links li a {
   color: var(--dusty-rose);
   font-weight: bold;
-  font-family: Caveat Brush;
+  font-family: Karla, sans-serif;
 }
 
 .freebies-btn {
@@ -83,6 +83,47 @@ button {
   padding: 0.5rem 1rem;
   border-radius: 6px;
 }
+
+.freebie-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.freebie-form label {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.input {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--charcoal-gray);
+  border-radius: 6px;
+  width: 250px;
+}
+
+.btn {
+  background-color: var(--dusty-rose);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: var(--muted-lavender);
+}
+
+.freebie-download {
+  margin-top: 2rem;
+  text-align: center;
+}
+
 
 /* Hero Section */
 .hero {
@@ -109,8 +150,8 @@ button {
   z-index: 2;
   text-align: left;
   max-width: 550px;
-  margin-left: 8%;
-  padding-top: 8rem;
+  /* margin-left: 8%;
+  padding-top: 8rem; */
   color: var(--charcoal-gray);
   font-family: "Quicksand", sans-serif;
 }
@@ -191,7 +232,7 @@ img.white-squiggly {
 }
 
 .loopty-loop {
-  top: -10%;
+  top: -5%;
   left: 25%;
   width: 470px;
 }
@@ -210,9 +251,9 @@ img.white-squiggly {
 
 
 .butterfly {
-  top: 25%;
+  top: 15%;
   left: 60%;
-  width: 00px;
+  width: 600px;
 }
 
 
@@ -230,8 +271,8 @@ img.white-squiggly {
 }
 
 .crown {
-  top: -10%;
-  left: -15%;
+  top: 3%;
+  left: -5%;
   width: 850px;
 }
 
@@ -243,7 +284,7 @@ img.white-squiggly {
 
 .dusty-rose-squiggly {
   bottom: 45%;
-  left: 10%;
+  left: 36%;
   width: 180px;
 }
 
@@ -267,7 +308,7 @@ img.white-squiggly {
 
 .star1 {
   top: 10%;
-  right:-5%;
+  right: -5%;
   width: 555px;
 }
 
@@ -281,6 +322,15 @@ img.white-squiggly {
   top: 30%;
   left: 70%;
   width: 885px;
+}
+
+.kenzie-name {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  width: 900px;
+  z-index: 2;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Floating animation */
@@ -372,21 +422,30 @@ img.white-squiggly {
 
 /* About Section */
 .about-the-artist {
-  text-align: center;
+  text-align: right;
   padding: 3rem 2rem;
   background-color: var(--muted-lavender);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .about-the-artist h2 {
-  font-size: 2rem;
-  margin-bottom: 6rem;
+  font-size: 4rem;
+  margin: 6rem;
+  bottom: 10px;
   color: var(--cream);
-  text-align: right;
+  text-align: center;
+
+
 }
 
 .about-the-artist p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  top: 10px;
+  margin: 3rem;
   color: var(--charcoal-gray);
   text-align: right;
 }
@@ -394,17 +453,140 @@ img.white-squiggly {
 .about-the-artist img.artist-photo {
   width: 600px;
   height: auto;
-  border-radius: 50%;
+  border-radius: 20%;
   margin: 1rem 0;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.about-the-artist p,
+img.artist-photo {
+  animation: fadeIn 1.5s ease-in-out;
+
+
 }
 
 .learn-more-button {
   background-color: var(--sage-green);
   color: var(--charcoal-gray);
+  margin: 3rem 2rem;
 }
+
+/* ========== About Page ========== */
+
+/* About Hero Section */
+.about-hero {
+  background-color: var(--cream);
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--charcoal-gray);
+}
+
+.about-hero h1 {
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+  color: var(--sage-green);
+}
+
+.about-hero p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* About Content Section */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+}
+
+.about-image img {
+  max-width: 300px;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: var(--dusty-rose);
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+/* Fun Facts Section */
+.fun-facts {
+  background-color: var(--faint-lavender, #f6eef5);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.fun-facts h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--lavender);
+}
+
+.facts-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Mission Statement */
+.mission-statement {
+  padding: 4rem 2rem;
+  background-color: var(--sage-tint, #e8f2ee);
+  text-align: center;
+}
+
+.mission-statement blockquote {
+  font-style: italic;
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--charcoal-gray);
+}
+
+/* CTA Button */
+.cta {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.cta .btn {
+  background-color: var(--dusty-rose);
+  color: white;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta .btn:hover {
+  background-color: var(--muted-lavender);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
 
 /* Newsletter */
 .newsletter-signup {
@@ -425,6 +607,188 @@ img.white-squiggly {
   background-color: var(--dusty-rose);
   color: var(--white);
 }
+
+/* Blog Hero */
+.blog-hero {
+  background-color: var(--cream);
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--charcoal-gray);
+}
+
+.blog-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--dusty-rose);
+}
+
+.blog-hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Blog Grid */
+.blog-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 3rem 1rem;
+  background-color: var(--soft-beige, #fefaf7);
+}
+
+.blog-post {
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 340px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.blog-post:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.blog-post img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-post h2 {
+  font-size: 1.5rem;
+  margin: 1rem;
+  color: var(--sage-green);
+}
+
+.blog-post p {
+  font-size: 1rem;
+  margin: 0 1rem 1.5rem;
+  line-height: 1.6;
+  color: var(--charcoal-gray);
+}
+
+.read-more-button {
+  display: block;
+  margin: 0 1rem 1.5rem;
+  padding: 0.6rem 1rem;
+  background-color: var(--dusty-rose);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-button:hover {
+  background-color: var(--muted-lavender);
+}
+
+
+/* Creative Blog Post Container */
+.creative-rhythms,
+.designing-from-rest,
+.small-things {
+  background-color: var(--cream);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.blog-post-container {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  font-family: 'Karla', sans-serif;
+  color: var(--charcoal-gray);
+  line-height: 1.8;
+}
+
+/* Blog Title */
+.blog-post-full h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--dusty-rose);
+  text-align: center;
+}
+
+/* Post Date */
+.post-date {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--sage-green);
+  margin-bottom: 2rem;
+}
+
+/* Featured Image */
+.blog-feature-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Blog Content */
+.blog-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.blog-content h2 {
+  font-size: 1.8rem;
+  color: var(--muted-lavender);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Italics inside blog */
+.blog-content em {
+  font-style: italic;
+  color: var(--sage-green);
+}
+
+/* Back Button */
+.back-button {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.back-button .btn {
+  background-color: var(--dusty-rose);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-button .btn:hover {
+  background-color: var(--muted-lavender);
+}
+
+/* Designing From Rest Blog Hero Section */
+/* Removed duplicate blog-hero, blog-grid, blog-post, blog-post h2, blog-post p, read-more-button, blog-post-container, blog-post-full h1, post-date, blog-feature-image, blog-content h2, blog-content p, back-button, and back-button .btn to prevent conflicting styles */
+.disclaimer {
+  background-color: var(--faint-lavender, #f6eef5);
+  color: var(--charcoal-gray);
+  font-size: 0.95rem;
+  padding: 1.5rem 2rem;
+  margin-top: 3rem;
+  border-left: 4px solid var(--dusty-rose);
+  border-radius: 6px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 /* Footer */
 .footer {
@@ -457,3 +821,183 @@ img.white-squiggly {
 .footer a {
   color: var(--white);
 }
+
+/* Responsive and Semantic Enhancements */
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--dusty-rose);
+}
+
+.navbar.open .nav-links {
+  display: block;
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+  .background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    background-color: var(--cream);
+    padding: 1rem;
+  }
+
+  .navbar.open .nav-links {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+    margin: 2rem 1rem 1rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    margin: 2rem 1rem 2rem;
+  }
+
+  .shop-button,
+  .blog-button {
+    background-color: var(--sage-green);
+    color: var(--charcoal-gray);
+    margin: 2rem 1rem;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.9rem;
+    border-radius: 6px;
+
+
+  }
+
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-the-artist {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-the-artist p {
+    text-align: center;
+  }
+
+  .about-the-artist img.artist-photo {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .about-the-artist h2 {
+    font-size: 2.5rem;
+    margin: 2rem 1rem;
+  }
+
+  .about-the-artist p {
+    font-size: 1.2rem;
+    margin: 1rem;
+  }
+
+  .facts-list {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-post {
+    max-width: 100%;
+  }
+
+  .newsletter-signup input[type="email"] {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .newsletter-signup button {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Semantic Enhancements */
+/* Ensures buttons have role and labels if necessary for accessibility */
+button,
+.btn {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: inline-block;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .featured-products {
+    padding: 2rem 1rem;
+  }
+
+  .featured-products h2 {
+    font-size: 1.5rem;
+  }
+
+  .product {
+    width: 90%;
+    max-width: 300px;
+    padding: 1rem;
+  }
+
+  .product img {
+    max-height: 180px;
+    object-fit: contain;
+  }
+
+  img.olives,
+img.duck,
+img.free-form,
+img.lavender-squiggly,
+img.loopty-loop,
+img.kenzie-name,
+img.colored-cloud,
+img.sage-green-squiggly,
+img.cream-squiggly,
+img.crown,
+img.diamond-stars,
+img.dusty-rose-squiggly,
+img.gradient-star,
+img.sage-green-squiggly,
+img.sparkling-stars,
+img.star1,
+img.star2,
+img.white-squiggly {
+      display: none;
+  
+}
+}
+
+
